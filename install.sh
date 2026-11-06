@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="mtsandeep/l8bin"
-L8B_IN="${L8B_IN:-https://l8b.in}"
+REPO="wilfredocamacho/l8bin"
+L8B_IN="${L8B_IN:-https://raw.githubusercontent.com/${REPO}/main/install.sh}"
 CHANGELOG_URL="${CHANGELOG_URL:-https://github.com/${REPO}/releases}"
 VPS_SETUP_URL="${VPS_SETUP_URL:-https://gist.github.com/mtsandeep/fbcfe30351d78b8ff9ec9d3c75354ec6}"
 
