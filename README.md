@@ -42,16 +42,16 @@ See [Architecture](docs/architecture/architecture.md) for the full breakdown, an
 
 ```bash
 # Interactive — asks what to install
-curl -fsSL https://l8b.in | bash
+curl -fsSL https://raw.githubusercontent.com/wilfredocamacho/l8bin/main/install.sh | bash
 
 # Master server (orchestrator + dashboard + Caddy)
-curl -fsSL https://l8b.in | bash -s master
+curl -fsSL https://raw.githubusercontent.com/wilfredocamacho/l8bin/main/install.sh | bash -s master
 
 # Agent
-curl -fsSL https://l8b.in | bash -s agent
+curl -fsSL https://raw.githubusercontent.com/wilfredocamacho/l8bin/main/install.sh | bash -s agent
 
 # CLI only
-curl -fsSL https://l8b.in | bash -s cli
+curl -fsSL https://raw.githubusercontent.com/wilfredocamacho/l8bin/main/install.sh | bash -s cli
 ```
 
 Run the master on a Linux VPS as root — the installer sets up Docker if it's missing. The guided walkthrough (prompts, DNS, admin account, first deploy) lives at **[l8bin.com/quickstart](https://l8bin.com/quickstart)**.
@@ -96,10 +96,10 @@ Mix any servers, any providers — each agent hosts its own set of apps:
 
 ```bash
 # On the master — generates mTLS certs, prints a cert bundle
-curl -fsSL https://l8b.in | bash -s certs
+curl -fsSL https://raw.githubusercontent.com/wilfredocamacho/l8bin/main/install.sh | bash -s certs
 
 # On each agent — prompts for the cert bundle
-curl -fsSL https://l8b.in | bash -s agent
+curl -fsSL https://raw.githubusercontent.com/wilfredocamacho/l8bin/main/install.sh | bash -s agent
 ```
 
 Or start from the dashboard — **Nodes → Add Node** — which walks you through it. Details in [Multi-Server Setup](docs/topics/multi-server.md).
@@ -137,7 +137,7 @@ docker compose --profile master up -d --build
 On Windows with Docker Desktop, the installer script runs the full stack locally:
 
 ```powershell
-iex (irm https://l8b.in/windows.ps1)   # add -Clean to tear it down
+iex (irm https://raw.githubusercontent.com/wilfredocamacho/l8bin/main/install-windows.ps1)   # add -Clean to tear it down
 ```
 
 Caddy generates a self-signed cert for `*.localhost` — expect a browser warning.
